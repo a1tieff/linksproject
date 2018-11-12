@@ -1,4 +1,4 @@
 class User < ApplicationRecord
-  has_many: Boards
-  has_many: Links
+  has_many :boards
+  has_many :links
 end

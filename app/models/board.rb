@@ -1,4 +1,4 @@
 class Board < ApplicationRecord
-  has_many: Links
-  belongs_to: User
+  has_many :links
+  belongs_to :user
 end
