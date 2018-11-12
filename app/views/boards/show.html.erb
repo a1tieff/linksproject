@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @board.id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @board.user_id %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @board.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @board.description %>
+</p>
+
+<p>
+  <strong>Links number:</strong>
+  <%= @board.links_number %>
+</p>
+
+<p>
+  <strong>Share link:</strong>
+  <%= @board.share_link %>
+</p>
+
+<p>
+  <strong>Share url:</strong>
+  <%= @board.share_url %>
+</p>
+
+<%= link_to 'Edit', edit_board_path(@board) %> |
+<%= link_to 'Back', boards_path %>
