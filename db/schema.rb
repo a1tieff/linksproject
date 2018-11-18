@@ -10,6 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2018_11_18_142947) do
+
+  create_table "boards", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "title"
+    t.text "description"
+    t.integer "links_number"
+    t.boolean "share_link"
+    t.string "share_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "links", force: :cascade do |t|
+    t.string "url"
+    t.string "title"
+    t.string "image"
+    t.integer "user_id"
+    t.integer "board_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end

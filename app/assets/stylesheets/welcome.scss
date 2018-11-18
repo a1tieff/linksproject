@@ -1,0 +1,22 @@
+// Place all the styles related to the Welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.menubar {
+  box-sizing: border-box;
+  margin-top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: white;
+}
+
+.linklist {
+  margin-left: 1000px;
+  margin-right: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.welcomeText {
+  margin-top: 30px;
+}
