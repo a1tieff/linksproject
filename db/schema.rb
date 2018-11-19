@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2018_11_18_142947) do
   create_table "links", force: :cascade do |t|
     t.string "url"
     t.string "title"
-    t.string "image"
+    t.file "image"
     t.integer "user_id"
     t.integer "board_id"
     t.datetime "created_at", null: false

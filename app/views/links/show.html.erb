@@ -1,3 +1,7 @@
+<% if @link.image.try(:url) %>
+ <%= image_tag @link.image.url, width: '100px' %>
+<% end %>
+
 <p id="notice"><%= notice %></p>
 
 <p>
