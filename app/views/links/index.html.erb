@@ -2,33 +2,24 @@
 
 <h1>Links</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Id</th>
-      <th>Board</th>
-      <th>Title</th>
-      <th>Url</th>
-      <th>Image</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="linkItem">
+  <% @links.each do |link| %>
+    <div class="container">
+       <%#= link.id %>
+       <%#= link.board_id %>
+       <img class=linkImage <%= link.image %> >
+       <p class=linkTitle><%= link.title %></p>
+       <p><%= link.url %></p>
 
-  <tbody>
-    <% @links.each do |link| %>
-      <tr>
-        <td><%= link.id %></td>
-        <td><%= link.board_id %></td>
-        <td><%= link.title %></td>
-        <td><%= link.url %></td>
-        <td><%= link.image %></td>
-        <td><%= link_to 'Show', link %></td>
-        <td><%= link_to 'Edit', edit_link_path(link) %></td>
-        <td><%= link_to 'Destroy', link, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <div class="linkActions">
+         <p><%= link_to 'Show', link %></p>
+         <p><%= link_to 'Edit', edit_link_path(link) %></p>
+         <p><%= link_to 'Destroy', link, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+      </div>
+    </div>
+  <% end %>
+</div>
+
 
 <br>
 
