@@ -14,3 +14,18 @@
  *= require_tree .
  *= require_self
  */
+
+ .submit {
+   /*border-radius: 30px;*/
+   background-color: #007BFF;
+   border: none;
+   font-style: "Helvetica";
+   color: white;
+   font-size: 14px;
+   padding: 10px 20px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+ }
+
+ 

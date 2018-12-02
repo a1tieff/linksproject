@@ -3,8 +3,6 @@ body {
   color: #333;
   margin-left: 50px;
   font-family: helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
 }
 
 /*p, ol, ul, td {
@@ -67,7 +65,7 @@ div {
   margin-bottom: 20px;
   background-color: #f0f0f0;
 
-  h2 {
+  /*h2 {
     text-align: left;
     font-weight: bold;
     padding: 5px 5px 5px 15px;
@@ -75,7 +73,7 @@ div {
     margin: -7px -7px 0;
     background-color: #c00;
     color: #fff;
-  }
+  }*/
 
   ul li {
     font-size: 12px;
@@ -85,17 +83,4 @@ div {
 
 label {
   display: block;
-}
-
-.submit_link {
-  /*border-radius: 30px;*/
-  background-color: #007BFF;
-  border: none;
-  font-style: "Helvetica";
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 14px;
 }

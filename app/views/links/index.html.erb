@@ -13,12 +13,12 @@
             <%= image_tag link.image.url, width: "360px", height: "190px" %>
           <% end %>
        </div>
-       <p class=linkTitle><%= link_to link.title, link %></p>
+       <p id="linkTitle"><%= link_to link.title, link %></p>
        <p><%= link.url %></p>
 
       <div class="linkActions">
-         <p><%= link_to 'Редатировать', edit_link_path(link) %></p>
-         <p><%= link_to 'Удалить', link, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+         <%= link_to 'Редактировать', edit_link_path(link) %>
+         <%= link_to 'Удалить', link, method: :delete, data: { confirm: 'Are you sure?' } %>
       </div>
     </div>
   <% end %>

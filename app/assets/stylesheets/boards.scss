@@ -10,7 +10,6 @@ body{
   width: 100%;
   height: 100%;
   margin-top: 80px;
-  margin-bottom: 10px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -18,19 +17,18 @@ body{
 }
 
 .boardItem {
-  width: 380px;
+  width: 600px;
   display: flex;
   flex-direction: column;
   margin-bottom: 40px;
 }
 
-.boardTitle {
+#boardTitle {
   font-style: "Helvetica";
   font-size: 30px;
   color: black;
   font-weight: normal;
-  margin-top: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 p {
@@ -46,9 +44,14 @@ p {
   display: flex;
   justify-content: flex-start;
   flex-direction: row;
-  margin-bottom: 10px;
 }
 
-.boardActions p:nth-child(2n) {
+#actionItem {
+  font-style: "Helvetica";
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.boardActions:last-child {
   margin-left: 20px;
 }
