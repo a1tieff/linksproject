@@ -1,26 +1,25 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Links</h1>
+<header class=linkBoardTitle> Title here <%#= board.title %></header>
+<p class=boardDescription> Description here <%#= board.description %></p>
 
-<div class="linkItem">
+<div class="linkContainer">
   <% @links.each do |link| %>
-    <div class="container">
+    <div class="linkItem">
        <%#= link.id %>
        <%#= link.board_id %>
-       <img class=linkImage <%= link.image %> >
-       <p class=linkTitle><%= link.title %></p>
+       <div class=linkImage <%= link.image %> >
+          <% if link.image.try(:url) %>
+            <%= image_tag link.image.url, width: "360px", height: "190px" %>
+          <% end %>
+       </div>
+       <p class=linkTitle><%= link_to link.title, link %></p>
        <p><%= link.url %></p>
 
       <div class="linkActions">
-         <p><%= link_to 'Show', link %></p>
-         <p><%= link_to 'Edit', edit_link_path(link) %></p>
-         <p><%= link_to 'Destroy', link, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+         <p><%= link_to 'Редатировать', edit_link_path(link) %></p>
+         <p><%= link_to 'Удалить', link, method: :delete, data: { confirm: 'Are you sure?' } %></p>
       </div>
     </div>
   <% end %>
 </div>
-
-
-<br>
-
-<%= link_to 'New Link', new_link_path %>

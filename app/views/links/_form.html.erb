@@ -26,6 +26,10 @@
     <%= form.number_field :board_id %>
   </div>
 
+  <% @boards = Board.all %>
+
+  <%= select_tag "boards", options_from_collection_for_select(@boards, "id", "title"), id: "dropdown" %>
+
   <div class="field">
     <%= form.label :title %>
     <%= form.text_field :title %>
@@ -42,6 +46,6 @@
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Save", :class => "submit_link" %>
   </div>
 <% end %>

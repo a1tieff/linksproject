@@ -1,0 +1,15 @@
+<header class="menubar">
+  <div class="logo">
+  <%= link_to 'Index', welcome_index_path %>
+  </div>
+
+  <div class="linklist">
+    <div class="linkTo"><%= link_to 'Добавить подборку', new_board_path %></div>
+    <div class="linkTo"><%= link_to 'Добавить ссылку', new_link_path %></div>
+  </div>
+
+  <div class="userAvatar">
+    <div class="linkTo"><%= link_to "User", users_path %></div>
+    <div class="avatarImage"></div>
+  </div>
+</header>

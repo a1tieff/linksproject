@@ -1,16 +1,20 @@
 body {
   background-color: #fff;
   color: #333;
-  margin: 33px;
-  font-family: verdana, arial, helvetica, sans-serif;
+  margin-left: 50px;
+  font-family: helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
 
-p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
+/*p, ol, ul, td {
+  font-family: helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+}*/
+
+h1 {
+  margin-top: 80px;
 }
 
 pre {
@@ -21,14 +25,14 @@ pre {
 
 a {
   color: #000;
+  text-decoration: none;
 
   &:visited {
-    color: #666;
+    color: #000;
   }
 
   &:hover {
-    color: #fff;
-    background-color: #000;
+    color: #616161;
   }
 }
 
@@ -81,4 +85,17 @@ div {
 
 label {
   display: block;
+}
+
+.submit_link {
+  /*border-radius: 30px;*/
+  background-color: #007BFF;
+  border: none;
+  font-style: "Helvetica";
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
 }

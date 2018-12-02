@@ -13,4 +13,18 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
+//= require select2
+//= require jquery
+//= require jquery_ujs
 //= require_tree .
+
+$(function() {
+function test(param) {
+console.log('test')
+}
+})
+
+$( "#dropdown" ).select2({
+placeholder: "Select some option"
+})
+});

@@ -1,27 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Boards</h1>
-
-<div class="boardItem">
+<div class="boardContainer">
   <% @boards.each do |board| %>
-    <div class="container">
+    <div class="boardItem">
         <%#= board.id %>
         <%#= board.user_id %>
-        <p class="boardTitle"><%= board.title %></p>
+        <p class="boardTitle"><%=link_to board.title, links_path %></p>
         <p><%= board.description %></p>
         <p><%= board.links_number %></p>
         <p><%= board.share_link %></p>
         <p><%= board.share_url %></p>
 
       <div class="boardActions"
-        <p><%= link_to 'Show', links_path %></p>
-        <p><%= link_to 'Edit', edit_board_path(board) %></p>
-        <p><%= link_to 'Destroy', board, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+        <p><%= link_to 'Редактировать', edit_board_path(board) %></p>
+        <p><%= link_to 'Удалить', board, method: :delete, data: { confirm: 'Are you sure?' } %></p>
       </div>
     </div>
 <% end %>
 </div>
-
-<br>
-
-<a class="addNew"<%= link_to 'New Board', new_board_path %></a>
