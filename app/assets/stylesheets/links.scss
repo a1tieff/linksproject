@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body {
+  margin-left: 46px;
+}
+
 .linkBoardTitle {
   margin-top: 100px;
   font-style: "Helvetica";
@@ -52,6 +56,11 @@
   margin-left: 10px;
 }
 
+#linkUrl {
+  color: #999999;
+  font-size: 14px;
+}
+
 .linkItem p {
   font-style: "Helvetica";
   font-weight: normal;
@@ -76,13 +85,7 @@
  font-style: "Helvetica";
  font-weight: normal;
  font-size: 14px;
- display: flex;
- justify-content: flex-start;
  margin-bottom: 10px;
  margin-left: 10px;
  font-size: 14px;
 }
-
-/*.linkActions:last-child {
-  margin-left: 20px;
-}*/

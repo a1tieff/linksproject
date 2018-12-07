@@ -42,16 +42,10 @@ p {
 
 .boardActions {
   display: flex;
-  justify-content: flex-start;
-  flex-direction: row;
 }
 
 #actionItem {
   font-style: "Helvetica";
   font-weight: normal;
   font-size: 14px;
-}
-
-.boardActions:last-child {
-  margin-left: 20px;
 }

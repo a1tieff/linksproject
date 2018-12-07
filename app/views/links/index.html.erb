@@ -1,25 +1,26 @@
 <p id="notice"><%= notice %></p>
 
-<header class=linkBoardTitle> Title here <%#= board.title %></header>
-<p class=boardDescription> Description here <%#= board.description %></p>
+<header class=linkBoardTitle><%= @board.title %></header>
+<p class=boardDescription><%= @board.description %></p>
 
 <div class="linkContainer">
   <% @links.each do |link| %>
-    <div class="linkItem">
-       <%#= link.id %>
-       <%#= link.board_id %>
-       <div class=linkImage <%= link.image %> >
-          <% if link.image.try(:url) %>
-            <%= image_tag link.image.url, width: "360px", height: "190px" %>
-          <% end %>
-       </div>
-       <p id="linkTitle"><%= link_to link.title, link %></p>
-       <p><%= link.url %></p>
 
-      <div class="linkActions">
-         <%= link_to 'Редактировать', edit_link_path(link) %>
-         <%= link_to 'Удалить', link, method: :delete, data: { confirm: 'Are you sure?' } %>
-      </div>
+    <div class="linkItem">
+      <%= link_to link.url do %>
+           <div class=linkImage <%= link.image %> >
+              <% if link.image.try(:url) %>
+                <%= image_tag link.image.url, width: "360px", height: "190px" %>
+              <% end %>
+           </div>
+           <p id="linkTitle"><%= link.title %></p>
+           <p id="linkUrl"><%= link.url %></p>
+      <% end %>
+
+        <div class="linkActions">
+          <%= link_to 'Редактировать', edit_link_path(link) %>
+          <%= link_to 'Удалить', link, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
     </div>
   <% end %>
 </div>

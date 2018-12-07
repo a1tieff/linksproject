@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_18_142947) do
+ActiveRecord::Schema.define(version: 2018_12_06_192155) do
 
   create_table "boards", force: :cascade do |t|
     t.integer "user_id"
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2018_11_18_142947) do
   create_table "links", force: :cascade do |t|
     t.string "url"
     t.string "title"
-    t.file "image"
+    t.string "image"
     t.integer "user_id"
     t.integer "board_id"
     t.datetime "created_at", null: false
